@@ -1,10 +1,10 @@
 # AI Proxy Unified Hub (`ai-proxy`)
 
-A unified AI Gateway & multi-user chat platform combining **[LibreChat](https://github.com/danny-avila/LibreChat)** (an open-source AI Chat UI) and **[LiteLLM Proxy](https://github.com/BerriAI/litellm)** (an AI Gateway for API Key management, load balancing, budget caps, and multi-provider routing).
+A unified AI Gateway and multi-user chat platform combining **[LibreChat](https://github.com/danny-avila/LibreChat)** (an open-source AI Chat UI) and **[LiteLLM Proxy](https://github.com/BerriAI/litellm)** (an AI Gateway for API Key management, load balancing, budget caps, and multi-provider routing).
 
 ---
 
-## 🏗️ Architecture Topology
+## Architecture Topology
 
 The diagram below illustrates the interaction between end users, LibreChat, LiteLLM Proxy, and upstream LLM providers:
 
@@ -27,16 +27,16 @@ graph TD
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```text
 ai-proxy/
-├── LibreChat/          # 💬 User Interface Layer (Chat Platform)
+├── LibreChat/          # User Interface Layer (Chat Platform)
 │   ├── librechat.yaml  # Connection config pointing to LiteLLM Proxy
 │   ├── api/            # Backend server (Node.js/Express)
 │   └── client/         # Frontend web application (React/Vite)
 │
-└── litellm/            # 🛡️ AI Gateway Layer (Proxy Server & Admin Dashboard)
+└── litellm/            # AI Gateway Layer (Proxy Server & Admin Dashboard)
     ├── ui/             # Web Admin Dashboard for Keys, Budgets & Analytics
     ├── Dockerfile      # Dockerfile for running LiteLLM Proxy Engine
     ├── render.yaml     # Render Cloud deployment blueprint
@@ -45,7 +45,7 @@ ai-proxy/
 
 ---
 
-## ✨ Key Features
+## Key Features
 
 1. **Zero API Key Leakage:** End users log in to LibreChat, select their preferred model, and start chatting. All upstream API keys are securely managed server-side inside LiteLLM Proxy.
 2. **Intuitive Web Admin UI:** Admins can dynamically add, update, or rotate API keys (OpenAI, OpenRouter, NVIDIA NIM, Anthropic...) directly via LiteLLM's Web Dashboard without modifying code or redeploying.
@@ -55,7 +55,7 @@ ai-proxy/
 
 ---
 
-## 🚀 Deployment Guide (Render Cloud)
+## Deployment Guide (Render Cloud)
 
 ### Step 1: Create PostgreSQL Database (For LiteLLM Admin UI)
 1. Log in to [Render Dashboard](https://dashboard.render.com) -> Click **New +** -> Select **PostgreSQL**.
@@ -96,7 +96,7 @@ ai-proxy/
 
 ---
 
-## 🔐 Admin UI & Key Management
+## Admin UI & Key Management
 
 Once LiteLLM Proxy is deployed and live:
 1. Open the Admin UI: `https://<your-litellm-service>.onrender.com/ui`
@@ -106,7 +106,7 @@ Once LiteLLM Proxy is deployed and live:
 
 ---
 
-## 📜 License
+## License
 This monorepo combines two open-source projects:
 - **LibreChat**: MIT License
 - **LiteLLM**: Apache 2.0 License
