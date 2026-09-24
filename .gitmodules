@@ -1,0 +1,6 @@
+[submodule "LibreChat"]
+	path = LibreChat
+	url = https://github.com/Quantaphocpython/LibreChat.git
+[submodule "litellm"]
+	path = litellm
+	url = https://github.com/Quantaphocpython/litellm.git
