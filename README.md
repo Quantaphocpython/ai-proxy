@@ -71,6 +71,10 @@ ai-proxy/
    - `UI_USERNAME`: `admin` *(Admin UI username)*
    - `UI_PASSWORD`: `YourSecurePassword123!` *(Admin UI password)*
    - `DATABASE_URL`: *(Paste the Postgres Internal URL from Step 1)*
+   - `SET_VERBOSE`: `True` *(Enables detailed debug logs during deploy/runtime)*
+   - `LITELLM_LOG`: `DEBUG` *(Outputs detailed debug logs to stdout)*
+   - `LITELLM_DISABLE_TELEMETRY`: `True` *(Reduces background memory overhead)*
+   - `WEB_CONCURRENCY`: `1` *(Limits workers to 1 to fit within 512MB RAM)*
 
 ### Step 3: Configure LibreChat to Connect to LiteLLM
 1. Verify `LibreChat/librechat.yaml` contains the custom endpoint:
